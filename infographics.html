@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Open House</title>
+<!-- links to CSS -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+<!-- meta data -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Open House">
+	<meta name="keywords" content="ownership, objects">
+</head>
+<body class="bg-white">
+	<!-- header -->
+	<nav id="navigation" class="header bg-white">
+		<h1 class="t-dark-blue" id="h1">house</h1>
+		<p class="currently t-dark-blue" id="currently">currently: infographics</p>
+	</nav>
+<!-- navigation -->
+	<nav class="container" id="links">
+		<div class="l-nav">
+			<a href="about.html" class="l-nav-link about-link l-about">
+				<p class="nav-header">about</p>
+				<p class="nav-title">open house</p>
+				<p class="nav-description">influences, process, and its owner, Taylor</p>
+			</a>
+			<a href="index.html" class="l-nav-link bedroom-link l-bedroom">
+				<p class="nav-header">bedroom</p>
+				<p class="nav-title">memories of 381 objects</p>
+				<p class="nav-description">displayed and stored</p>
+			</a>
+			<a href="essay.html" class="l-nav-link essay-link l-essay">
+				<p class="nav-header">essay</p>
+				<p class="nav-title">open house: an exploration of ownership</p>
+				<p class="nav-description">by Taylor Simpson</p>
+			</a>
+			<a href="data.html" class="l-nav-link infographic-link l-info">
+				<p class="nav-header">infographics</p>
+				<p class="nav-title">looking at what I own as a whole</p>
+				<p class="nav-description">numbers by category</p>
+			</a>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="l-block bg-light-gray">
+			<div class="jumpto">
+				<div class="l-label bg-label-dark">
+					<p class="label t-light-gray">dataset<img src="down-arrow.svg" class="down-arrow"></p>
+				</div>
+				<!-- full dropdown for about section -->
+				<!-- <div class="l-dropdown">	
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">overview</p>
+					</div>
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">by classification/p>
+					</div>
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">by location acquired at</p>
+					</div>
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">by year</p>
+					</div>
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">by how they were acquired</p>
+					</div>
+					<div class="dropdown bg-dropdown">
+						<p class="label t-light-gray">by person</p>
+					</div>
+				</div> -->
+			</div>
+			<div class="height-block bg-black">
+				<!-- <div class="l-circles">
+					<div id="display-circle"></div>
+					<div id="stored-circle"></div>
+				</div> -->
+				<div class="l-quote">
+					<p class="quote t-light-gray">I own 495 objects located in my bedroom in Baltimore. <span>214 are on display.</span> <span>281 are in storage.</span> They were acquired 7 different ways over 14 years from 21 cities. The objects range from practical to beautiful in 14 categories.</p>
+				</div>
+			</div>
+			<div class="l-text-label bg-white">
+				<p class="text-label t-dark-blue">all objects</p>
+			</div>
+			<div class="height-block">
+				<div class="l-options">
+			<!-- year objects were acquired -->
+				<form class="l-sort-info">
+					<p class="sort-info-title t-dark-blue">year</p>
+					<div class="l-checkbox">
+				  		<input type="checkbox" id="i03">
+				  		<label for="i03" class="sort-info-option t-dark-blue"><span class="i-checkbox">2003</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		 <input type="checkbox" id="i05" class="checkbox">
+				  		<label for="i05" class="sort-info-option t-dark-blue"><span class="i-checkbox">2005</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="checkbox" id="i06" class="checkbox">
+				 		<label for="i06" class="sort-info-option t-dark-blue"><span class="i-checkbox">2006</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i07" class="checkbox">
+				 		<label for="i07" class="sort-info-option t-dark-blue"><span class="i-checkbox">2007</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i08" class="checkbox">
+				 		<label for="i08" class="sort-info-option t-dark-blue"><span class="i-checkbox">2008</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i09" class="checkbox">
+				 		<label for="i09" class="sort-info-option t-dark-blue"><span class="i-checkbox">2009</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i10" class="checkbox">
+				 		<label for="i10" class="sort-info-option t-dark-blue"><span class="i-checkbox">2010</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i11" class="checkbox">
+				 		<label for="i11" class="sort-info-option t-dark-blue"><span class="i-checkbox">2011</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i12" class="checkbox">
+				 		<label for="i12" class="sort-info-option t-dark-blue"><span class="i-checkbox">2012</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i13" class="checkbox">
+				 		<label for="i13" class="sort-info-option t-dark-blue"><span class="i-checkbox">2013</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i14" class="checkbox">
+				 		<label for="i14" class="sort-info-option t-dark-blue"><span class="i-checkbox">2014</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i15" class="checkbox">
+				 		<label for="i15" class="sort-info-option t-dark-blue"><span class="i-checkbox">2015</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i16" class="checkbox">
+				 		<label for="i16" class="sort-info-option t-dark-blue"><span class="i-checkbox">2016</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="i17" class="checkbox">
+				 		<label for="i17" class="sort-info-option t-dark-blue"><span class="i-checkbox">2017</span></label><br>
+				 	</div>
+				</form>
+			<!-- how objects were acquired -->
+				<form class="l-sort-info">
+					<p class="sort-info-title t-dark-blue">acquired how</p>
+					<div class="l-checkbox">
+				  		<input type="checkbox" id="ifnew">
+				  		<label for="ifnew" class="sort-info-option t-dark-blue"><span class="i-checkbox">found new</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		 <input type="checkbox" id="ifused" class="checkbox">
+				  		<label for="ifused" class="sort-info-option t-dark-blue"><span class="i-checkbox">found used</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="checkbox" id="ignew" class="checkbox">
+				 		<label for="ignew" class="sort-info-option t-dark-blue"><span class="i-checkbox">given new</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="igused" class="checkbox">
+				 		<label for="igused" class="sort-info-option t-dark-blue"><span class="i-checkbox">given used</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="imade" class="checkbox">
+				 		<label for="imade" class="sort-info-option t-dark-blue"><span class="i-checkbox">made</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="ipnew" class="checkbox">
+				 		<label for="ipnew" class="sort-info-option t-dark-blue"><span class="i-checkbox">purchased new</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				 		<input type="checkbox" id="ipused" class="checkbox">
+				 		<label for="ipused" class="sort-info-option t-dark-blue"><span class="i-checkbox">purchased used</span></label><br>
+				 	</div>
+				</form>
+			<!-- objects by classification -->
+				<form class="l-sort-info">
+					<p class="sort-info-title t-dark-blue">classification</p>
+					<div class="l-checkbox">
+				  		<input type="checkbox" name="sort" id="ibeautiful" class="i-checkbox">
+				  		<label for="ibeautiful" class="sort-info-option t-dark-blue"><span class="i-checkbox">beautiful</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		 <input type="checkbox" name="sort" id="iboth" class="i-checkbox">
+				  		<label for="iboth" class="sort-info-option t-dark-blue"><span class="i-checkbox">both</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="checkbox" name="sort" id="ipractical" class="i-checkbox">
+				 		<label for="ipractical" class="sort-info-option t-dark-blue"><span class="i-checkbox">practical</span></label><br>
+				 	</div>
+				</form>
+			
+			<!-- objects by category -->
+				<form class="l-sort-info">
+					<p class="sort-info-title t-dark-blue">category</p>
+					<div class="l-checkbox">
+				  		<input type="checkbox" id="accessory">
+				  		<label for="accessory" class="sort-info-option t-dark-blue"><span class="i-checkbox">accessory</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="artsupply">
+				  		<label for="artsupply" class="sort-info-option t-dark-blue"><span class="i-checkbox">art supply</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="artwork">
+				  		<label for="artwork" class="sort-info-option t-dark-blue"><span class="i-checkbox">artwork</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="bag">
+				  		<label for="bag" class="sort-info-option t-dark-blue"><span class="i-checkbox">bag</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="book">
+				  		<label for="book" class="sort-info-option t-dark-blue"><span class="i-checkbox">book</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="clothing">
+				  		<label for="clothing" class="sort-info-option t-dark-blue"><span class="i-checkbox">clothing</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="container">
+				  		<label for="container" class="sort-info-option t-dark-blue"><span class="i-checkbox">container</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="home">
+				  		<label for="home" class="sort-info-option t-dark-blue"><span class="i-checkbox">home decor</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="electronic">
+				  		<label for="electronic" class="sort-info-option t-dark-blue"><span class="i-checkbox">electronic</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="furniture">
+				  		<label for="furniture" class="sort-info-option t-dark-blue"><span class="i-checkbox">furniture</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="important">
+				  		<label for="important" class="sort-info-option t-dark-blue"><span class="i-checkbox">important</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="office">
+				  		<label for="office" class="sort-info-option t-dark-blue"><span class="i-checkbox">office supply</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="paper">
+				  		<label for="paper" class="sort-info-option t-dark-blue"><span class="i-checkbox">paper</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="music">
+				  		<label for="music" class="sort-info-option t-dark-blue"><span class="i-checkbox">music</span></label><br>
+				  	</div>
+				</form>
+			<!-- objects by location -->
+				<form class="l-sort-info">
+					<p class="sort-info-title t-dark-blue">location</p>
+					<div class="l-checkbox">
+				  		<input type="checkbox" id="Baltimore">
+				  		<label for="Baltimore" class="sort-info-option t-dark-blue"><span class="i-checkbox">Baltimore, MD</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Brooklyn">
+				  		<label for="Brooklyn" class="sort-info-option t-dark-blue"><span class="i-checkbox">Brooklyn, NY</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Canton">
+				  		<label for="Canton" class="sort-info-option t-dark-blue"><span class="i-checkbox">Canton, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="College">
+				  		<label for="College" class="sort-info-option t-dark-blue"><span class="i-checkbox">College Park, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Commerce">
+				  		<label for="Commerce" class="sort-info-option t-dark-blue"><span class="i-checkbox">Commerce Twp, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Detroit">
+				  		<label for="Detroit" class="sort-info-option t-dark-blue"><span class="i-checkbox">Detroit, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Grand">
+				  		<label for="Grand" class="sort-info-option t-dark-blue"><span class="i-checkbox">Grand Haven, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Glen">
+				  		<label for="Glen" class="sort-info-option t-dark-blue"><span class="i-checkbox">Glen Echo, MD</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Mackinac">
+				  		<label for="Mackinac" class="sort-info-option t-dark-blue"><span class="i-checkbox">Mackinac Island, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Midland">
+				  		<label for="Midland" class="sort-info-option t-dark-blue"><span class="i-checkbox">Midland, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="New">
+				  		<label for="New" class="sort-info-option t-dark-blue"><span class="i-checkbox">New York, NY</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Novi">
+				  		<label for="Novi" class="sort-info-option t-dark-blue"><span class="i-checkbox">Novi, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Petoskey">
+				  		<label for="Petoskey" class="sort-info-option t-dark-blue"><span class="i-checkbox">Petoskey, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Rockville">
+				  		<label for="Rockville" class="sort-info-option t-dark-blue"><span class="i-checkbox">Rockville, MD</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Philly">
+				  		<label for="Philly" class="sort-info-option t-dark-blue"><span class="i-checkbox">Philadelphia, PA</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="SF">
+				  		<label for="SF" class="sort-info-option t-dark-blue"><span class="i-checkbox">San Francisco, CA</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Sleeping">
+				  		<label for="Sleeping" class="sort-info-option t-dark-blue"><span class="i-checkbox">Sleeping Bear Dunes, MI</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Souderton">
+				  		<label for="Souderton" class="sort-info-option t-dark-blue"><span class="i-checkbox">Souderton, PA</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Sunnyvale">
+				  		<label for="Sunnyvale" class="sort-info-option t-dark-blue"><span class="i-checkbox">Sunnyvale, CA</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="Tampa">
+				  		<label for="Tampa" class="sort-info-option t-dark-blue"><span class="i-checkbox">Tampa, FL</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="checkbox" id="White">
+				  		<label for="White" class="sort-info-option t-dark-blue"><span class="i-checkbox">White Marsh, MD</span></label><br>
+				  	</div>
+				</form>
+			<!-- displayed circle -->
+				<script type="text/html" id="infographic_div">
+					<div class="counter">
+						
+						<svg width="<%= numberItems %>" height="<%= numberItems %>" viewBox="0 0 <%= numberItems %> <%= numberItems %>" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="<%= numberItems / 2 %>" cy="<%= numberItems / 2 %>" r="<%= numberItems / 2 %>" fill="#FFB699" transition="1s"></circle>
+						</svg>
+						<p class="count"><%= flattenedLength + " " + "objects" %></p>
+						<p class="count-label">on display</p>
+					</div>
+				</script>
+				<div id="circle_target"></div>
+				<script type="text/html" id="storedinfographic_div">
+					<div class="storedcounter">	
+						
+						<svg width="<%= numberItems %>" height="<%= numberItems %>" viewBox="0 0 <%= numberItems %> <%= numberItems %>" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="<%= numberItems / 2 %>" cy="<%= numberItems / 2 %>" r="<%= numberItems / 2 %>" fill="#EA5449" transition="1s"></circle>
+						</svg>
+						<p class="count"><%= flattenedLength + " " + "objects" %></p>
+						<p class="count-label">in storage</p>
+					</div>
+				</script>
+				<div id="storedcircle_target"></div>
+				</div>
+			</div>
+		<!-- objects by how they were acquired -->
+			<!-- <div class="height-block">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue">objects by how they were acquired</p>
+				</div>
+			</div> -->
+		<!-- objects by classification -->
+			<!-- <div class="height-block">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue">objects by classification</p>
+				</div>
+			</div> -->
+		<!-- objects by year -->
+			<!-- <div class="height-block">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue">objects by category</p>
+				</div>
+			</div> -->
+		<!-- objects by location -->
+			<!-- <div class="height-block">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue">objects by location acquired at</p>
+				</div>
+			</div> -->
+		<!-- objects by category -->
+			<!-- <div class="height-block">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue">objects by category</p>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="info.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

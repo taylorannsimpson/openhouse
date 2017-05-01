@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Open House</title>
+<!-- links to CSS -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+<!-- meta data -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Open House">
+	<meta name="keywords" content="ownership, objects">
+</head>
+<body id="background" class="bg-white">
+<!-- header -->
+	<nav id="navigation" class="header bg-white">
+		<h1 class="t-dark-blue" id="h1">house</h1>
+		<p class="currently t-dark-blue" id="currently">currently: bedroom, displayed objects</p>
+	</nav>
+<!-- navigation -->
+	<nav class="container" id="links">
+		<div class="l-nav">
+			<a href="about.html" class="l-nav-link about-link l-about">
+				<p class="nav-header">about</p>
+				<p class="nav-title">open house</p>
+				<p class="nav-description">influences, process, and its owner, Taylor</p>
+			</a>
+			<a href="index.html" class="l-nav-link bedroom-link l-bedroom">
+				<p class="nav-header">bedroom</p>
+				<p class="nav-title">memories of 381 objects</p>
+				<p class="nav-description">displayed and stored</p>
+			</a>
+			<a href="essay.html" class="l-nav-link essay-link l-essay">
+				<p class="nav-header">essay</p>
+				<p class="nav-title">open house: an exploration of ownership</p>
+				<p class="nav-description">by Taylor Simpson</p>
+			</a>
+			<a href="infographics.html" class="l-nav-link infographic-link l-info">
+				<p class="nav-header">infographics</p>
+				<p class="nav-title">looking at what I own as a whole</p>
+				<p class="nav-description">numbers by category</p>
+			</a>
+		</div>
+	</nav>
+<!-- displayed objects -->
+	<div class="container" id="displayed">
+		<!-- sorting sidebar for displayed objects -->
+		<div class="sort-sidebar">
+			<div class="l-sort bg-light-gray" id="sort-displayed">
+				<p class="form-title t-dark-blue">sort</p>
+				<form>
+					<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="d-alphabetical">
+				  		<label for="d-alphabetical" class="form-option t-dark-blue"><span class="checkbox">alphabetical</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		 <input type="radio" name="sort" id="d-classification" class="checkbox">
+				  		<label for="d-classification" class="form-option t-dark-blue"><span class="checkbox">classification</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="radio" name="sort" id="d-how" class="checkbox">
+				 		<label for="d-how" class="form-option t-dark-blue"><span class="checkbox">how it was acquired</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="d-location" class="checkbox">
+				  		<label for="d-location" class="form-option t-dark-blue"><span class="checkbox">location acquired at</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="d-year" class="checkbox" checked>
+				  		<label for="d-year" class="form-option t-dark-blue"><span class="checkbox">year acquired</span></label>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="d-category" class="checkbox">
+				  		<label for="d-category" class="form-option t-dark-blue"><span class="checkbox">category</span></label>
+				  	</div>
+				</form>
+			</div>
+			<div class="search-bar bg-med-gray" id="sidebar-displayed">
+				<img src="search.svg" class="search-icon">
+			</div>
+		</div>
+<!-- object content for displayed objects -->
+		<div class="l-block bg-light-gray">
+			<!-- dropdown labels for displayed section -->
+			<div class="jumpto">
+				<script type="text/html" id="dLabel_div">
+					<% _.each(dDropLabel, function (label, key, list) { %>
+						<div class="l-label bg-label-dark">
+							<p class="label t-light-gray"><%= label %><img src="down-arrow.svg" class="down-arrow"></p>
+						</div>
+					<%});%>	
+				</script>
+				<div id="dLabelTarget"></div>
+				<!-- full dropdown for displayed objects -->
+				<div class="l-dropdown">
+				<script type="text/html" id="dDropdown_div">
+					<% _.each(dDropdown, function (dropdown, key, list) { %>	
+						<a href="#<%= dropdown %>">
+							<div class="dropdown bg-dropdown">
+								<p class="label t-light-gray"><%= dropdown %></p>
+							</div>
+						</a>
+					<%});%>	
+				</script>
+				<div id="dDropdown_target"></div>
+				</div>
+			</div>
+			<!-- object list for displayed objects -->
+			<div class="object-list"></div>
+			<script type="text/html" id="displayed_div">
+				<div class="l-text-label bg-white">
+					<p class="text-label t-dark-blue" id="<%= titleLabel %>"><%= titleLabel %></p>
+				</div>
+				<% _.each(displayed, function (displayed, key, list) { %>
+					<div>
+						<p class="displayed object t-dark-blue <%= displayed.use %> bg-light-gray"><%= displayed.object %></p>
+						<div class="meaning">
+							<p class="details t-dark-blue"><%= displayed.meaning %></p>
+							<p class="tag"><%= displayed.year %></p>
+							<p class="tag"><%= displayed.how %></p>
+							<p class="tag"><%= displayed.location %></p>
+							<p class="tag"><%= displayed.category %></p>
+							<p class="tag"><%= displayed.use %></p>
+						</div>
+					</div>
+				<%});%>
+			</script>
+			<div id="displayed_target"></div>
+			<div class="object-list"></div>
+		</div>
+	</div>
+	<!-- toggle to go to stored section -->
+	<div id="square">
+		<p class="square-label">open</p>
+	</div>
+<!-- stored objects -->
+	<div class="container" id="stored">
+		<!-- sidebar -->
+		<div class="sort-sidebar">
+			<div class="l-sort bg-sidebar-dark" id="sort-stored">
+				<p class="form-title t-light-gray">sort</p>
+				<form>
+					<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="s-alphabetical">
+				  		<label for="s-alphabetical" class="form-option t-light-gray"><span class="s-checkbox">alphabetical</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="radio" name="sort" id="s-classification" class="checkbox">
+				  		<label for="s-classification" class="form-option t-light-gray"><span class="s-checkbox">classification</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="radio" name="sort" id="s-how" class="checkbox">
+				 		<label for="s-how" class="form-option t-light-gray"><span class="s-checkbox">how it was acquired</span></label><br>
+				 	</div>
+				 	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="s-location" class="checkbox">
+				  		<label for="s-location" class="form-option t-light-gray"><span class="s-checkbox">location acquired at</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="s-year" class="checkbox" checked>
+				  		<label for="s-year" class="form-option t-light-gray"><span class="s-checkbox">year acquired</span></label>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="s-category" class="checkbox">
+				  		<label for="s-category" class="form-option t-light-gray"><span class="s-checkbox">category</span></label>
+				  	</div>
+				</form>
+			</div>
+			<div class="search-bar bg-l-dark-blue" id="sidebar-stored">
+				<img src="search-light.svg" class="search-icon">
+			</div>
+		</div>
+<!-- object content for stored objects -->
+		<div class="l-block bg-dark-blue">
+			<!-- dropdown labels for stored section -->
+			<div class="jumpto">
+				<script type="text/html" id="sLabel_div">
+					<% _.each(dDropLabel, function (label, key, list) { %>
+						<div class="l-label bg-label-light">
+							<p class="label t-dark-blue"><%= label %><img src="arrow-dark.svg" class="down-arrow"></p>
+						</div>
+					<%});%>	
+				</script>
+				<div id="sLabelTarget"></div>
+				<!-- full dropdown for stored objects -->
+				<div class="l-dropdown">
+				<script type="text/html" id="sDropdown_div">
+					<% _.each(dDropdown, function (dropdown, key, list) { %>	
+							
+							<div class="dropdown bg-dropdown-light">
+								<p class="label t-dark-blue"><%= dropdown %></p>
+							</div>
+
+					<%});%>	
+				</script>
+				<div id="sDropdown_target"></div>
+				</div>
+			</div>
+			<!-- object list for stored objects -->
+			<div class="object-list"></div>
+			<script type="text/html" id="stored_div">
+				<div class="l-text-label bg-ll-dark-blue">
+					<p class="text-label t-light-gray" id="<%= titleLabel %>"><%= titleLabel %></p>
+				</div>
+				<% _.each(stored, function (stored, key, list) { %>
+					<div>
+						<p class="stored object t-light-gray <%= stored.use %> bg-dark-blue"><%= stored.object %></p>
+						<div class="meaning">
+							<p class="details t-dark-blue"><%= stored.meaning %></p>
+							<p class="tag"><%= stored.year %></p>
+							<p class="tag"><%= stored.how %></p>
+							<p class="tag"><%= stored.location %></p>
+							<p class="tag"><%= stored.category %></p>
+							<p class="tag"><%= stored.use %></p>
+						</div>
+					</div>
+				<%});%>	
+			</script>
+			<div id="stored_target"></div>
+			<div class="object-list"></div>
+		</div>
+	</div>
+	<!-- toggle to go back to displayed objects -->
+	<div id="arc">
+		<p class="arc-label">close</p>
+	</div>
+	<!-- javascript sources -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
