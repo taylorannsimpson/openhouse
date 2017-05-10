@@ -12,7 +12,7 @@
 <body class="bg-white">
 	<!-- header -->
 	<nav id="navigation" class="header bg-white">
-		<h1 class="t-dark-blue" id="h1">house</h1>
+		<h1 class="t-dark-blue data-page" id="h1">open house</h1>
 		<p class="currently t-dark-blue" id="currently">currently: infographics</p>
 	</nav>
 <!-- navigation -->
@@ -25,15 +25,15 @@
 			</a>
 			<a href="index.html" class="l-nav-link bedroom-link l-bedroom">
 				<p class="nav-header">bedroom</p>
-				<p class="nav-title">memories of 381 objects</p>
-				<p class="nav-description">displayed and stored</p>
+				<p class="nav-title">memories of 498 objects</p>
+				<p class="nav-description">on display and in storage</p>
 			</a>
 			<a href="essay.html" class="l-nav-link essay-link l-essay">
 				<p class="nav-header">essay</p>
 				<p class="nav-title">open house: an exploration of ownership</p>
 				<p class="nav-description">by Taylor Simpson</p>
 			</a>
-			<a href="data.html" class="l-nav-link infographic-link l-info">
+			<a href="infographics.html" class="l-nav-link infographic-link l-info">
 				<p class="nav-header">infographics</p>
 				<p class="nav-title">looking at what I own as a whole</p>
 				<p class="nav-description">numbers by category</p>
@@ -44,40 +44,28 @@
 		<div class="l-block bg-light-gray">
 			<div class="jumpto">
 				<div class="l-label bg-label-dark">
-					<p class="label t-light-gray">dataset<img src="down-arrow.svg" class="down-arrow"></p>
+					<p class="label t-light-gray">dataset<img src="svg/down-arrow.svg" class="down-arrow"></p>
 				</div>
 				<!-- full dropdown for about section -->
-				<!-- <div class="l-dropdown">	
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">overview</p>
-					</div>
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">by classification/p>
-					</div>
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">by location acquired at</p>
-					</div>
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">by year</p>
-					</div>
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">by how they were acquired</p>
-					</div>
-					<div class="dropdown bg-dropdown">
-						<p class="label t-light-gray">by person</p>
-					</div>
-				</div> -->
-			</div>
-			<div class="height-block bg-black">
-				<!-- <div class="l-circles">
-					<div id="display-circle"></div>
-					<div id="stored-circle"></div>
-				</div> -->
-				<div class="l-quote">
-					<p class="quote t-light-gray">I own 495 objects located in my bedroom in Baltimore. <span>214 are on display.</span> <span>281 are in storage.</span> They were acquired 7 different ways over 14 years from 21 cities. The objects range from practical to beautiful in 14 categories.</p>
+				<div class="l-dropdown">	
+					<a href="#overview">
+						<div class="dropdown bg-dropdown">
+							<p class="label t-light-gray">overview</p>
+						</div>
+					</a>
+					<a href="#all">
+						<div class="dropdown bg-dropdown">
+							<p class="label t-light-gray">all objects</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="l-text-label bg-white">
+			<div class="height-block bg-orange">
+				<div class="l-quote" id="overview">
+					<p class="quote t-light-gray">I own 498 objects located in my bedroom in Baltimore. <span>215 are on display.</span> <span>283 are in storage.</span> They were acquired over 14 years in 7 different ways from 21 cities. The objects range from practical to beautiful in 14 categories.</p>
+				</div>
+			</div>
+			<div class="l-text-label bg-white" id="all">
 				<p class="text-label t-dark-blue">all objects</p>
 			</div>
 			<div class="height-block">
@@ -364,41 +352,11 @@
 				<div id="storedcircle_target"></div>
 				</div>
 			</div>
-		<!-- objects by how they were acquired -->
-			<!-- <div class="height-block">
-				<div class="l-text-label bg-white">
-					<p class="text-label t-dark-blue">objects by how they were acquired</p>
-				</div>
-			</div> -->
-		<!-- objects by classification -->
-			<!-- <div class="height-block">
-				<div class="l-text-label bg-white">
-					<p class="text-label t-dark-blue">objects by classification</p>
-				</div>
-			</div> -->
-		<!-- objects by year -->
-			<!-- <div class="height-block">
-				<div class="l-text-label bg-white">
-					<p class="text-label t-dark-blue">objects by category</p>
-				</div>
-			</div> -->
-		<!-- objects by location -->
-			<!-- <div class="height-block">
-				<div class="l-text-label bg-white">
-					<p class="text-label t-dark-blue">objects by location acquired at</p>
-				</div>
-			</div> -->
-		<!-- objects by category -->
-			<!-- <div class="height-block">
-				<div class="l-text-label bg-white">
-					<p class="text-label t-dark-blue">objects by category</p>
-				</div>
-			</div> -->
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script src="info.js"></script>
-    <script src="index.js"></script>
+    <script src="all.js"></script>
 </body>
 </html>

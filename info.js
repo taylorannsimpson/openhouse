@@ -53,13 +53,18 @@ var filteredArrays = [];
 var filterArrays = function() {
 
     _.map(checkedValues, function(val) {
-
-        var filteredArray =  _.filter(displayed, function(item){
-            
+        var filteredArray =  _.filter(displayed, function(item){           
             return item[val.key] === val.value;
         });
+        filteredArrays.push(filteredArray);    
+    });
+};
 
-        filteredArrays.push(filteredArray);
+var removeDisplayedFilterArrays = function(checkedValues) {
+    filteredArrays = _.map(checkedValues, function(val) {
+        return  _.filter(displayed, function(item){
+            return item[val.key] === val.value;
+        });
     
     });
 };
@@ -110,7 +115,16 @@ var storedFilterArrays = function() {
     });
 };
 
-var storedRemoveCheckedValue = function(checkedValues,obj) {
+var removeStoredFilterArrays = function(storedCheckedValues) {
+    storedFilteredArrays = _.map(storedCheckedValues, function(val) {
+        return  _.filter(stored, function(item){
+            return item[val.key] === val.value;
+        });
+    
+    });
+};
+
+var storedRemoveCheckedValue = function(storedCheckedValues,obj) {
 
   return _.filter(storedCheckedValues, function(kv) {
 
@@ -145,14 +159,18 @@ $('#ibeautiful').click(function() {
 
     if ($('#ibeautiful').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ibeautiful').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -166,14 +184,18 @@ $('#iboth').click(function() {
 
     if ($('#iboth').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#iboth').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -187,14 +209,18 @@ $('#ipractical').click(function() {
 
     if ($('#ipractical').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ipractical').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -211,14 +237,18 @@ $('#i03').click(function() {
 
     if ($('#i03').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i03').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -232,14 +262,18 @@ $('#i05').click(function() {
 
     if ($('#i05').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i05').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -253,14 +287,18 @@ $('#i06').click(function() {
 
     if ($('#i06').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i06').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -274,14 +312,18 @@ $('#i07').click(function() {
 
     if ($('#i07').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i07').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -295,14 +337,18 @@ $('#i08').click(function() {
 
     if ($('#i08').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i08').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -316,14 +362,18 @@ $('#i09').click(function() {
 
     if ($('#i09').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i09').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -338,14 +388,18 @@ $('#i10').click(function() {
 
     if ($('#i10').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i10').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -360,14 +414,18 @@ $('#i11').click(function() {
 
     if ($('#i11').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i11').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -382,14 +440,18 @@ $('#i12').click(function() {
 
     if ($('#i12').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i12').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -403,14 +465,18 @@ $('#i13').click(function() {
 
     if ($('#i13').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i13').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -426,14 +492,18 @@ $('#i14').click(function() {
 
     if ($('#i14').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i14').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -447,14 +517,18 @@ $('#i15').click(function() {
 
     if ($('#i15').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i15').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -468,14 +542,18 @@ $('#i16').click(function() {
 
     if ($('#i16').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i16').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -489,14 +567,18 @@ $('#i17').click(function() {
 
     if ($('#i17').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#i17').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -513,14 +595,18 @@ $('#ifnew').click(function() {
 
     if ($('#ifnew').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ifnew').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -534,14 +620,18 @@ $('#ifused').click(function() {
 
     if ($('#ifused').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ifused').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -555,14 +645,18 @@ $('#ignew').click(function() {
 
     if ($('#ignew').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ignew').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -576,14 +670,18 @@ $('#igused').click(function() {
 
     if ($('#igused').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#igused').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -597,14 +695,18 @@ $('#imade').click(function() {
 
     if ($('#imade').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#imade').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -618,14 +720,18 @@ $('#ipnew').click(function() {
 
     if ($('#ipnew').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ipnew').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -639,14 +745,18 @@ $('#ipused').click(function() {
 
     if ($('#ipused').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#ipused').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -663,14 +773,18 @@ $('#Baltimore').click(function() {
 
     if ($('#Baltimore').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Baltimore').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -684,14 +798,18 @@ $('#Brooklyn').click(function() {
 
     if ($('#Brooklyn').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Brooklyn').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -705,14 +823,18 @@ $('#Canton').click(function() {
 
     if ($('#Canton').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Canton').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -726,14 +848,18 @@ $('#Caseville').click(function() {
 
     if ($('#Caseville').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Caseville').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -747,14 +873,18 @@ $('#College').click(function() {
 
     if ($('#College').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#College').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -768,14 +898,18 @@ $('#Commerce').click(function() {
 
     if ($('#Commerce').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Commerce').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -789,14 +923,18 @@ $('#Detroit').click(function() {
 
     if ($('#Detroit').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Detroit').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -810,14 +948,18 @@ $('#Grand').click(function() {
 
     if ($('#Grand').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Grand').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -831,14 +973,18 @@ $('#Glen').click(function() {
 
     if ($('#Glen').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Glen').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -852,14 +998,18 @@ $('#Mackinac').click(function() {
 
     if ($('#Mackinac').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Mackinac').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -873,14 +1023,18 @@ $('#Midland').click(function() {
 
     if ($('#Midland').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Midland').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -894,14 +1048,18 @@ $('#New').click(function() {
 
     if ($('#New').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#New').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -915,14 +1073,18 @@ $('#Novi').click(function() {
 
     if ($('#Novi').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Novi').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -936,14 +1098,18 @@ $('#Petoskey').click(function() {
 
     if ($('#Petoskey').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Petoskey').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -957,14 +1123,18 @@ $('#Rockville').click(function() {
 
     if ($('#Rockville').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Rockville').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -978,14 +1148,18 @@ $('#Philly').click(function() {
 
     if ($('#Philly').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Philly').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -999,14 +1173,18 @@ $('#SF').click(function() {
 
     if ($('#SF').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#SF').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1020,14 +1198,18 @@ $('#Sleeping').click(function() {
 
     if ($('#Sleeping').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Sleeping').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1041,14 +1223,18 @@ $('#Souderton').click(function() {
 
     if ($('#Souderton').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Souderton').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1062,14 +1248,18 @@ $('#Sunnyvale').click(function() {
 
     if ($('#Sunnyvale').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Sunnyvale').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1083,14 +1273,18 @@ $('#Tampa').click(function() {
 
     if ($('#Tampa').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#Tampa').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1104,14 +1298,18 @@ $('#White').click(function() {
 
     if ($('#White').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#White').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1128,14 +1326,18 @@ $('#accessory').click(function() {
 
     if ($('#accessory').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#accessory').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1149,14 +1351,18 @@ $('#artsupply').click(function() {
 
     if ($('#artsupply').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#artsupply').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1170,14 +1376,18 @@ $('#artwork').click(function() {
 
     if ($('#artwork').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#artwork').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1191,14 +1401,18 @@ $('#bag').click(function() {
 
     if ($('#bag').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#bag').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1212,14 +1426,18 @@ $('#book').click(function() {
 
     if ($('#book').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#book').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1233,14 +1451,18 @@ $('#clothing').click(function() {
 
     if ($('#clothing').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#clothing').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1254,14 +1476,18 @@ $('#container').click(function() {
 
     if ($('#container').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#container').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1275,14 +1501,18 @@ $('#home').click(function() {
 
     if ($('#home').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#home').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1296,14 +1526,18 @@ $('#electronic').click(function() {
 
     if ($('#electronic').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#electronic').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1317,14 +1551,18 @@ $('#furniture').click(function() {
 
     if ($('#furniture').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#furniture').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1338,14 +1576,18 @@ $('#important').click(function() {
 
     if ($('#important').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#important').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1359,14 +1601,18 @@ $('#office').click(function() {
 
     if ($('#office').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#office').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1380,14 +1626,18 @@ $('#paper').click(function() {
 
     if ($('#paper').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#paper').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();
@@ -1401,14 +1651,18 @@ $('#music').click(function() {
 
     if ($('#music').is(':checked')) {
         checkedValues.push(obj);
+        filterArrays();
     } else {
-        checkedValues = removeCheckedValue(checkedValues,obj)
+        checkedValues = removeCheckedValue(checkedValues,obj);
+        removeDisplayedFilterArrays();
     }
 
     if ($('#music').is(':checked')) {
         storedCheckedValues.push(obj);
+        storedFilterArrays();
     } else {
-        storedCheckedValues = removeCheckedValue(checkedValues,obj)
+        storedCheckedValues = removeCheckedValue(storedCheckedValues,obj);
+        removeStoredFilterArrays();
     }
 
     updateCount();

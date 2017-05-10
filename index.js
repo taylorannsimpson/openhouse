@@ -1,4 +1,3 @@
-
 // shows and hides navigation //
 //----------------------------//
 
@@ -14,16 +13,13 @@ $('#navigation').click(function(e) {
   $('#arc').toggle();
 
 });
-
 // shows stored section //
 //----------------------//
 
 $('#stored').hide();
 $('#arc').hide();
 
-$('#square').click(function(e) {
-
-  e.preventDefault();
+$('#square').click(function() {
 
   $('#background').toggleClass('bg-white');
   $('#navigation').toggleClass('bg-white');
@@ -41,9 +37,7 @@ $('#square').click(function(e) {
 // shows displayed section //
 //-------------------------//
 
-$('#arc').click(function(e) {
-
-  e.preventDefault();
+$('#arc').click(function() {
 
   $('#background').toggleClass('bg-white');
   $('#navigation').toggleClass('bg-white');
@@ -197,13 +191,19 @@ var textChanges = function() {
 
 var dDropAlphabet = ['#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
+var sDropAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
 var dDropUse = ['practical', 'both', 'beautiful'];
 
-var dDropLocation = ['Baltimore, MD', 'Brooklyn, NY', 'Canton, MI', 'Caseville, MI', 'College Park, MD', 'Commerce Twp, MI', 'Grand Haven, MI', 'Mackinac Island, MI', 'New York, NY', 'Novi, MI', 'Petoskey, MI', 'Philadelphia, PA', 'Souderton, PA', 'Sunnyvale, CA', 'Tampa, FL', 'White Marsh, MD'];
+var dDropLocation = ['Baltimore, MD', 'Brooklyn, NY', 'Canton, MI', 'Caseville, MI', 'College Park, MD', 'Commerce Twp, MI', 'Grand Haven, MI', 'Mackinac Island, MI', 'New York, NY', 'Novi, MI', 'Petoskey, MI', 'Philadelphia, PA', 'Rockville, MD', 'San Francisco, CA', 'Sleeping Bear Dunes, MI', 'Sunnyvale, CA', 'Tampa, FL', 'White Marsh, MD'];
+
+var sDropLocation = ['Baltimore, MD', 'Brooklyn, NY', 'Canton, MI', 'Caseville, MI', 'College Park, MD', 'Commerce Twp, MI', 'Detroit, MI', 'Glen Echo, MD', 'Grand Haven, MI', 'Mackinac Island, MI', 'Midland, MI', 'New York, NY', 'Novi, MI', 'Sleeping Bear Dunes, MI', 'Souderton, PA', 'Sunnyvale, CA', 'Tampa, FL', 'White Marsh, MD'];
 
 var dDropHow = ['purchased new', 'purchased used', 'given new', 'given used', 'made', 'found used', 'found new'];
 
 var dDropYear = ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'];
+
+var sDropYear = [ '2003', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'];
 
 var dDropCategory = ['accessory', 'art supply', 'artwork', 'bag', 'book', 'clothing', 'container', 'home decor', 'electronic', 'furniture', 'important', 'office supply', 'paper', 'music'];
 
@@ -264,7 +264,7 @@ var setUpTemplate = function(sortDisplayed) {
 // displayed checkbox sorting toggles //
 //------------------------------------//
 
-if ($('#d-year').attr('checked')) {
+$(document).ready(function() {
 
   displayed_target.innerHTML = "";
   
@@ -290,7 +290,36 @@ if ($('#d-year').attr('checked')) {
   dSetUpDropdown();
   textChanges();
 
-};
+});
+
+
+$('#arc').click(function() {
+
+  displayed_target.innerHTML = "";
+  
+  dDropLabel = ['year'];
+  dDropdown = dDropYear;
+
+  sortGroup = _.sortBy(displayed, 'year'); 
+  groupDisplayed = _.groupBy(sortGroup, 'year');
+  // console.log(groupDisplayed);
+
+  _.each(groupDisplayed, function(displayed, key) {
+
+    var sortDisplayed = _.sortBy(displayed, 'object')
+      //console.log(key)
+
+      titleLabel = displayed[0].year;
+
+      setUpTemplate(sortDisplayed);
+
+  });
+  
+  dSetUpLabel();
+  dSetUpDropdown();
+  textChanges();
+
+});
 
 
 $('#d-year').click(function() {
@@ -473,12 +502,16 @@ var setUpStored = function(sortStored) {
 // checkbox toggles for stored objects //
 //-------------------------------------//
 
-if ($('#s-year').attr('checked')) {
+// if ($('#s-year').attr('checked')) {
+
+// $('#stored_div').ready(function() {
+
+$('#square').click(function() {
   
   stored_target.innerHTML = '';
 
   dDropLabel = ['year'];
-  dDropdown = dDropYear;
+  dDropdown = sDropYear;
   
   sortGroup = _.sortBy(stored, 'year'); 
   groupStored = _.groupBy(sortGroup, 'year');
@@ -498,14 +531,14 @@ if ($('#s-year').attr('checked')) {
   sSetUpDropdown();
   textChanges();
 
-};
+});
 
 $('#s-year').click(function() {
 
   stored_target.innerHTML = '';
 
   dDropLabel = ['year'];
-  dDropdown = dDropYear;
+  dDropdown = sDropYear;
   
   sortGroup = _.sortBy(stored, 'year'); 
   groupStored = _.groupBy(sortGroup, 'year');
@@ -532,7 +565,7 @@ $('#s-alphabetical').click(function() {
   stored_target.innerHTML = '';
 
   dDropLabel = ['alphabet'];
-  dDropdown = dDropAlphabet;
+  dDropdown = sDropAlphabet;
   
   sortGroup = _.sortBy(stored, 'letter'); 
   groupStored = _.groupBy(sortGroup, 'letter');
@@ -558,7 +591,7 @@ $('#s-location').click(function() {
   stored_target.innerHTML = '';
 
   dDropLabel = ['location'];
-  dDropdown = dDropLocation;
+  dDropdown = sDropLocation;
   
   sortGroup = _.sortBy(stored, 'location'); 
   groupStored = _.groupBy(sortGroup, 'location');
@@ -659,5 +692,3 @@ $('#s-category').click(function() {
   textChanges();
 
 });
-
-

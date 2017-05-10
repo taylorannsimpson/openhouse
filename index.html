@@ -12,8 +12,8 @@
 <body id="background" class="bg-white">
 <!-- header -->
 	<nav id="navigation" class="header bg-white">
-		<h1 class="t-dark-blue" id="h1">house</h1>
-		<p class="currently t-dark-blue" id="currently">currently: bedroom, displayed objects</p>
+		<h1 class="t-dark-blue index-page" id="h1">open house</h1>
+		<p class="currently t-dark-blue" id="currently">currently: bedroom</p>
 	</nav>
 <!-- navigation -->
 	<nav class="container" id="links">
@@ -25,8 +25,8 @@
 			</a>
 			<a href="index.html" class="l-nav-link bedroom-link l-bedroom">
 				<p class="nav-header">bedroom</p>
-				<p class="nav-title">memories of 381 objects</p>
-				<p class="nav-description">displayed and stored</p>
+				<p class="nav-title">memories of 498 objects</p>
+				<p class="nav-description">on display and in storage</p>
 			</a>
 			<a href="essay.html" class="l-nav-link essay-link l-essay">
 				<p class="nav-header">essay</p>
@@ -47,13 +47,10 @@
 			<div class="l-sort bg-light-gray" id="sort-displayed">
 				<p class="form-title t-dark-blue">sort</p>
 				<form>
+
 					<div class="l-checkbox">
-				  		<input type="radio" name="sort" id="d-alphabetical">
-				  		<label for="d-alphabetical" class="form-option t-dark-blue"><span class="checkbox">alphabetical</span></label><br>
-				  	</div>
-				  	<div class="l-checkbox">
-				 		 <input type="radio" name="sort" id="d-classification" class="checkbox">
-				  		<label for="d-classification" class="form-option t-dark-blue"><span class="checkbox">classification</span></label><br>
+				  		<input type="radio" name="sort" id="d-year" class="checkbox" checked>
+				  		<label for="d-year" class="form-option t-dark-blue"><span class="checkbox">year acquired</span></label>
 				  	</div>
 				  	<div class="l-checkbox">
 				 		<input type="radio" name="sort" id="d-how" class="checkbox">
@@ -63,18 +60,23 @@
 				  		<input type="radio" name="sort" id="d-location" class="checkbox">
 				  		<label for="d-location" class="form-option t-dark-blue"><span class="checkbox">location acquired at</span></label><br>
 				  	</div>
-				  	<div class="l-checkbox">
-				  		<input type="radio" name="sort" id="d-year" class="checkbox" checked>
-				  		<label for="d-year" class="form-option t-dark-blue"><span class="checkbox">year acquired</span></label>
-				  	</div>
+				  	
 				  	<div class="l-checkbox">
 				  		<input type="radio" name="sort" id="d-category" class="checkbox">
 				  		<label for="d-category" class="form-option t-dark-blue"><span class="checkbox">category</span></label>
 				  	</div>
+				  	<div class="l-checkbox">
+				 		 <input type="radio" name="sort" id="d-classification" class="checkbox">
+				  		<label for="d-classification" class="form-option t-dark-blue"><span class="checkbox">classification</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="d-alphabetical">
+				  		<label for="d-alphabetical" class="form-option t-dark-blue"><span class="checkbox">alphabetical</span></label><br>
+				  	</div>
 				</form>
 			</div>
 			<div class="search-bar bg-med-gray" id="sidebar-displayed">
-				<img src="search.svg" class="search-icon">
+				<img src="svg/search.svg" class="search-icon">
 			</div>
 		</div>
 <!-- object content for displayed objects -->
@@ -84,7 +86,7 @@
 				<script type="text/html" id="dLabel_div">
 					<% _.each(dDropLabel, function (label, key, list) { %>
 						<div class="l-label bg-label-dark">
-							<p class="label t-light-gray"><%= label %><img src="down-arrow.svg" class="down-arrow"></p>
+							<p class="label t-light-gray"><%= label %><img src="svg/down-arrow.svg" class="down-arrow"></p>
 						</div>
 					<%});%>	
 				</script>
@@ -139,12 +141,8 @@
 				<p class="form-title t-light-gray">sort</p>
 				<form>
 					<div class="l-checkbox">
-				  		<input type="radio" name="sort" id="s-alphabetical">
-				  		<label for="s-alphabetical" class="form-option t-light-gray"><span class="s-checkbox">alphabetical</span></label><br>
-				  	</div>
-				  	<div class="l-checkbox">
-				 		<input type="radio" name="sort" id="s-classification" class="checkbox">
-				  		<label for="s-classification" class="form-option t-light-gray"><span class="s-checkbox">classification</span></label><br>
+				  		<input type="radio" name="sort" id="s-year" class="checkbox" checked>
+				  		<label for="s-year" class="form-option t-light-gray"><span class="s-checkbox">year acquired</span></label>
 				  	</div>
 				  	<div class="l-checkbox">
 				 		<input type="radio" name="sort" id="s-how" class="checkbox">
@@ -154,18 +152,23 @@
 				  		<input type="radio" name="sort" id="s-location" class="checkbox">
 				  		<label for="s-location" class="form-option t-light-gray"><span class="s-checkbox">location acquired at</span></label><br>
 				  	</div>
-				  	<div class="l-checkbox">
-				  		<input type="radio" name="sort" id="s-year" class="checkbox" checked>
-				  		<label for="s-year" class="form-option t-light-gray"><span class="s-checkbox">year acquired</span></label>
-				  	</div>
+				  	
 				  	<div class="l-checkbox">
 				  		<input type="radio" name="sort" id="s-category" class="checkbox">
 				  		<label for="s-category" class="form-option t-light-gray"><span class="s-checkbox">category</span></label>
 				  	</div>
+				  	<div class="l-checkbox">
+				 		<input type="radio" name="sort" id="s-classification" class="checkbox">
+				  		<label for="s-classification" class="form-option t-light-gray"><span class="s-checkbox">classification</span></label><br>
+				  	</div>
+				  	<div class="l-checkbox">
+				  		<input type="radio" name="sort" id="s-alphabetical">
+				  		<label for="s-alphabetical" class="form-option t-light-gray"><span class="s-checkbox">alphabetical</span></label><br>
+				  	</div>
 				</form>
 			</div>
 			<div class="search-bar bg-l-dark-blue" id="sidebar-stored">
-				<img src="search-light.svg" class="search-icon">
+				<img src="svg/search-light.svg" class="search-icon">
 			</div>
 		</div>
 <!-- object content for stored objects -->
@@ -175,7 +178,7 @@
 				<script type="text/html" id="sLabel_div">
 					<% _.each(dDropLabel, function (label, key, list) { %>
 						<div class="l-label bg-label-light">
-							<p class="label t-dark-blue"><%= label %><img src="arrow-dark.svg" class="down-arrow"></p>
+							<p class="label t-dark-blue"><%= label %><img src="svg/arrow-dark.svg" class="down-arrow"></p>
 						</div>
 					<%});%>	
 				</script>
@@ -184,11 +187,11 @@
 				<div class="l-dropdown">
 				<script type="text/html" id="sDropdown_div">
 					<% _.each(dDropdown, function (dropdown, key, list) { %>	
-							
+						<a href="#<%= dropdown %>">	
 							<div class="dropdown bg-dropdown-light">
 								<p class="label t-dark-blue"><%= dropdown %></p>
 							</div>
-
+						</a>
 					<%});%>	
 				</script>
 				<div id="sDropdown_target"></div>
