@@ -187,7 +187,7 @@
 				<div class="l-dropdown">
 				<script type="text/html" id="sDropdown_div">
 					<% _.each(dDropdown, function (dropdown, key, list) { %>	
-						<a href="#<%= dropdown.replace(/\s+/g, '').replace(/[, ]+/g, '') %>">	
+						<a href="#S<%= dropdown.replace(/\s+/g, '').replace(/[, ]+/g, '') %>">	
 							<div class="dropdown bg-dropdown-light">
 								<p class="label t-dark-blue"><%= dropdown %></p>
 							</div>
@@ -201,7 +201,7 @@
 			<div class="object-list"></div>
 			<script type="text/html" id="stored_div">
 				<div class="l-text-label bg-ll-dark-blue">
-					<p class="text-label t-light-gray" id="<%= titleLabelID %>"><%= titleLabel %></p>
+					<p class="text-label t-light-gray" id="S<%= titleLabelID %>"><%= titleLabel %></p>
 				</div>
 				<% _.each(stored, function (stored, key, list) { %>
 					<div>

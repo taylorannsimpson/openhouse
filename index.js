@@ -204,6 +204,8 @@ var sDropYear = [ '2003', '2005', '2006', '2007', '2008', '2009', '2010', '2011'
 
 var dDropCategory = ['accessory', 'art supply', 'artwork', 'bag', 'book', 'clothing', 'container', 'home decor', 'electronic', 'furniture', 'important', 'office supply', 'paper', 'music'];
 
+var sDropCategory = ['accessory', 'art supply', 'artwork', 'bag', 'book', 'clothing', 'container', 'home decor', 'electronic', 'important', 'office supply', 'paper'];
+
 // dropdown setup //
 //----------------//
 
@@ -729,7 +731,7 @@ $('#s-category').click(function() {
   stored_target.innerHTML = '';
 
   dDropLabel = ['category'];
-  dDropdown = dDropCategory;
+  dDropdown = sDropCategory;
 
   sortGroup = _.sortBy(stored, 'category'); 
   groupStored = _.groupBy(sortGroup, 'category');
