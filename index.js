@@ -297,6 +297,7 @@ $(document).ready(function() {
       //console.log(key)
 
       titleLabel = displayed[0].year;
+      titleLabelID = titleLabel;
 
       setUpTemplate(sortDisplayed);
 
@@ -327,6 +328,7 @@ $('#arc').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].year;
+      titleLabelID = titleLabel;
 
       setUpTemplate(sortDisplayed);
 
@@ -356,6 +358,7 @@ $('#d-year').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].year;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -386,6 +389,7 @@ $('#d-alphabetical').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].letter;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -414,7 +418,7 @@ $('#d-location').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].location;
-      titleLabelID = titleLabel.replace(/\s+/g, '');
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -443,6 +447,7 @@ $('#d-how').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].how;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -471,6 +476,7 @@ $('#d-classification').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].use;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -499,6 +505,7 @@ $('#d-category').click(function() {
       //console.log(key)
 
       titleLabel = displayed[0].category;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpTemplate(sortDisplayed);
 
@@ -561,6 +568,7 @@ $('#square').click(function() {
       //console.log(key)
 
       titleLabel = stored[0].year;
+      titleLabelID = titleLabel;
 
       setUpStored(sortStored);
 
@@ -589,6 +597,7 @@ $('#s-year').click(function() {
       //console.log(key)
 
       titleLabel = stored[0].year;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
@@ -616,6 +625,7 @@ $('#s-alphabetical').click(function() {
     var sortStored = _.sortBy(stored, 'object');
 
       titleLabel = stored[0].letter;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
@@ -643,6 +653,7 @@ $('#s-location').click(function() {
     var sortStored = _.sortBy(stored, 'location');
 
       titleLabel = stored[0].location;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
@@ -671,6 +682,7 @@ $('#s-how').click(function() {
       //console.log(key)
 
       titleLabel = stored[0].how;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
@@ -699,6 +711,7 @@ $('#s-classification').click(function() {
       //console.log(key)
 
       titleLabel = stored[0].use;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
@@ -727,6 +740,7 @@ $('#s-category').click(function() {
       //console.log(key)
 
       titleLabel = stored[0].category;
+      titleLabelID = titleLabel.replace(/\s+/g, '').replace(/[, ]+/g, '');
 
       setUpStored(sortStored);
 
