@@ -956,6 +956,9 @@ input[type="checkbox"] {
     font-size: 2.125em;
     width: auto; }
 
+  .container {
+    margin: 50px 0 0 0; }
+
   /* navigation */
   .l-nav-link {
     width: 100vw;
@@ -974,31 +977,27 @@ input[type="checkbox"] {
   .l-info {
     padding: 50px 5% 100px 5%; }
 
-  .container {
-    margin: 50px 0 0 0;
-    width: auto; }
-
   .l-block {
     width: 100vw; }
 
   .nav-header {
-    font-size: 2.125em; }
+    font-size: 34px; }
 
   .nav-title {
-    font-size: 4em; }
+    font-size: 64px; }
 
   .nav-description {
-    font-size: 1.3215em; }
+    font-size: 21px; }
 
   /* bedroom page */
   .l-label {
     width: calc(100vw - 51px); }
 
   .label {
-    font-size: 1.3215em; }
+    font-size: 21px; }
 
   .text-label {
-    font-size: 1.3215em; }
+    font-size: 21px; }
 
   .object {
     padding: 15px 10%; }
@@ -1021,19 +1020,19 @@ input[type="checkbox"] {
     padding: 125px 5%; }
 
   .quote {
-    font-size: 4em; }
+    font-size: 64px; }
 
   .attribution {
-    font-size: 1.3215em; }
+    font-size: 21px; }
 
   .cap-title {
-    font-size: 1.3215em; }
+    font-size: 21px; }
 
   .l-s-quote {
     padding: 50px 5%; }
 
   .small-quote {
-    font-size: 2.125em; }
+    font-size: 34px; }
 
   .short-caption {
     width: 60vw; }
