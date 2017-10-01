@@ -949,11 +949,11 @@ input[type="checkbox"] {
   h1 {
     text-align: left;
     padding-left: 0;
-    font-size: 2.125em;
+    font-size: 34px;
     width: auto; }
 
   .currently {
-    font-size: 2.125em;
+    font-size: 34px;
     width: auto; }
 
   .container {
@@ -987,17 +987,17 @@ input[type="checkbox"] {
     font-size: 64px; }
 
   .nav-description {
-    font-size: 21px; }
+    font-size: 34px; }
 
   /* bedroom page */
   .l-label {
     width: calc(100vw - 51px); }
 
   .label {
-    font-size: 21px; }
+    font-size: 34px; }
 
   .text-label {
-    font-size: 21px; }
+    font-size: 34px; }
 
   .object {
     padding: 15px 10%; }
@@ -1023,10 +1023,10 @@ input[type="checkbox"] {
     font-size: 64px; }
 
   .attribution {
-    font-size: 21px; }
+    font-size: 34px; }
 
   .cap-title {
-    font-size: 21px; }
+    font-size: 34px; }
 
   .l-s-quote {
     padding: 50px 5%; }
