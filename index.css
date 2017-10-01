@@ -948,7 +948,13 @@ input[type="checkbox"] {
   /* overall */
   h1 {
     text-align: left;
-    padding-left: 0; }
+    padding-left: 0;
+    font-size: 2.125em;
+    width: auto; }
+
+  .currently {
+    font-size: 2.125em;
+    width: auto; }
 
   /* navigation */
   .l-nav-link {
@@ -957,26 +963,42 @@ input[type="checkbox"] {
     text-align: center; }
 
   .l-about {
-    padding: 100px 50px 50px 50px; }
+    padding: 100px 5% 50px 5%; }
 
   .l-bedroom {
-    padding: 50px; }
+    padding: 50px 5%; }
 
   .l-essay {
-    padding: 50px; }
+    padding: 50px 5%; }
 
   .l-info {
-    padding: 50px 50px 100px 50px; }
+    padding: 50px 5% 100px 5%; }
 
   .container {
-    margin: 50px 0 0 0; }
+    margin: 50px 0 0 0;
+    width: auto; }
 
   .l-block {
     width: 100vw; }
 
+  .nav-header {
+    font-size: 2.125em; }
+
+  .nav-title {
+    font-size: 4em; }
+
+  .nav-description {
+    font-size: 1.3215em; }
+
   /* bedroom page */
   .l-label {
     width: calc(100vw - 51px); }
+
+  .label {
+    font-size: 1.3215em; }
+
+  .text-label {
+    font-size: 1.3215em; }
 
   .object {
     padding: 15px 10%; }
@@ -990,13 +1012,28 @@ input[type="checkbox"] {
 
   /* longer text styles */
   .l-text {
-    padding: 50px 15%; }
+    padding: 50px 5%; }
+
+  .long-text {
+    font-size: 1.3215em; }
 
   .l-quote {
-    padding: 125px 10%; }
+    padding: 125px 5%; }
+
+  .quote {
+    font-size: 4em; }
+
+  .attribution {
+    font-size: 1.3215em; }
+
+  .cap-title {
+    font-size: 1.3215em; }
 
   .l-s-quote {
-    padding: 50px 7%; }
+    padding: 50px 5%; }
+
+  .small-quote {
+    font-size: 2.125em; }
 
   .short-caption {
     width: 60vw; }
