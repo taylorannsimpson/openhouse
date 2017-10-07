@@ -946,18 +946,35 @@ input[type="checkbox"] {
 /*--------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* overall */
+  .header {
+    padding: 30px 50px; }
+
   h1 {
     text-align: left;
     padding-left: 0;
-    font-size: 34px;
+    font-size: 52px;
     width: auto; }
 
   .currently {
-    font-size: 34px;
+    font-size: 52px;
     width: auto; }
 
   .container {
     margin: 50px 0 0 0; }
+
+  .l-label {
+    width: calc(100vw - 51px);
+    padding-left: 60px; }
+
+  .label {
+    font-size: 52px; }
+
+  .down-arrow {
+    width: 60px;
+    padding: 15px; }
+
+  .height-block {
+    min-height: auto; }
 
   /* navigation */
   .l-nav-link {
@@ -978,7 +995,10 @@ input[type="checkbox"] {
     padding: 50px 5% 100px 5%; }
 
   .l-block {
-    width: 100vw; }
+    width: 100vw;
+    height: calc(100vh -  80px);
+    bottom: 0;
+    overflow-x: hidden; }
 
   .nav-header {
     font-size: 34px; }
@@ -990,12 +1010,6 @@ input[type="checkbox"] {
     font-size: 34px; }
 
   /* bedroom page */
-  .l-label {
-    width: calc(100vw - 51px); }
-
-  .label {
-    font-size: 34px; }
-
   .text-label {
     font-size: 34px; }
 
@@ -1023,7 +1037,7 @@ input[type="checkbox"] {
     padding: 125px 5%; }
 
   .quote {
-    font-size: 64px; }
+    font-size: 72px; }
 
   .attribution {
     font-size: 34px; }
@@ -1032,16 +1046,16 @@ input[type="checkbox"] {
     font-size: 34px; }
 
   .l-s-quote {
-    padding: 50px 5%; }
+    padding: 50px 0; }
 
   .small-quote {
-    font-size: 34px; }
+    font-size: 52px; }
 
   .short-caption {
-    width: 60vw; }
+    width: 75vw; }
 
   .long-caption {
-    width: 75vw; }
+    width: auto; }
 
   .caption-text {
     font-size: 34px; }
