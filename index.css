@@ -1010,6 +1010,9 @@ input[type="checkbox"] {
     padding: 100px; }
 
   /* longer text styles */
+  .l-images {
+    padding: 30px 5%; }
+
   .l-text {
     padding: 50px 5%; }
 
@@ -1039,6 +1042,9 @@ input[type="checkbox"] {
 
   .long-caption {
     width: 75vw; }
+
+  .caption-text {
+    font-size: 34px; }
 
   .image {
     width: calc(100vw - 130px);
