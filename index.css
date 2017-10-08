@@ -1022,12 +1022,20 @@ input[type="checkbox"] {
     font-size: 38px; }
 
   .object {
-    padding: 15px 5%;
+    padding: 15px 120px;
     font-size: 38px; }
 
   .meaning {
-    padding: 15px 10%;
+    text-align: left;
+    padding: 15px 5% 15px 120px;
     font-size: 38px; }
+
+  .tag {
+    display: inline-block;
+    font-size: 38px;
+    line-height: 38px;
+    padding: 3px 10px;
+    margin: 20px 20px 20px 0; }
 
   /* bedroom page nav */
   .l-sort {
