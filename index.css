@@ -1194,6 +1194,22 @@ input[type="checkbox"] {
     padding: 5px;
     top: -15px; }
 
+  .counter {
+    padding: 5%;
+    right: 0;
+    left: clear; }
+
+  .storedcounter {
+    padding: 5%;
+    bottom: 30%;
+    right: 0; }
+
+  .count {
+    font-size: 72px; }
+
+  .count-label {
+    font-size: 38px; }
+
   /* scrollbar */
   ::-webkit-scrollbar {
     display: none; } }
