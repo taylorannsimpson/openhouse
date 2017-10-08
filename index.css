@@ -947,7 +947,7 @@ input[type="checkbox"] {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* overall */
   .header {
-    padding: 30px 50px; }
+    padding: 50px; }
 
   h1 {
     text-align: left;
@@ -956,15 +956,15 @@ input[type="checkbox"] {
     width: auto; }
 
   .currently {
-    font-size: 52px;
+    font-size: 38px;
     width: auto; }
 
   .container {
     margin: 50px 0 0 0; }
 
   .l-label {
-    width: calc(100vw - 51px);
-    padding-left: 60px; }
+    width: calc(100vw - 110px);
+    padding-left: 110px; }
 
   .label {
     font-size: 52px; }
@@ -973,45 +973,53 @@ input[type="checkbox"] {
     width: 60px;
     padding: 15px; }
 
+  .dropdown {
+    width: auto; }
+
   .height-block {
     min-height: auto; }
 
   /* navigation */
+  .l-nav {
+    width: auto;
+    height: 100vh; }
+
   .l-nav-link {
-    width: 100vw;
+    width: auto;
     height: auto;
-    text-align: center; }
+    text-align: center;
+    margin: auto; }
 
   .l-about {
-    padding: 100px 5% 50px 5%; }
+    padding: 150px 5% 30px 5%; }
 
   .l-bedroom {
-    padding: 50px 5%; }
+    padding: 30px 5%; }
 
   .l-essay {
-    padding: 50px 5%; }
+    padding: 30px 5%; }
 
   .l-info {
-    padding: 50px 5% 100px 5%; }
+    padding: 30px 5% 100px 5%; }
 
   .l-block {
     width: 100vw;
-    height: calc(100vh -  80px);
+    height: calc(100vh -  120px);
     bottom: 0;
     overflow-x: hidden; }
 
   .nav-header {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .nav-title {
-    font-size: 64px; }
+    font-size: 72px; }
 
   .nav-description {
-    font-size: 34px; }
+    font-size: 52px; }
 
   /* bedroom page */
   .text-label {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .object {
     padding: 15px 10%; }
@@ -1025,13 +1033,17 @@ input[type="checkbox"] {
 
   /* longer text styles */
   .l-images {
-    padding: 30px 5%; }
+    padding: 30px 5%;
+    width: auto; }
+
+  .image {
+    width: 100%; }
 
   .l-text {
     padding: 50px 5%; }
 
   .long-text {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .l-quote {
     padding: 125px 5%; }
@@ -1040,10 +1052,10 @@ input[type="checkbox"] {
     font-size: 72px; }
 
   .attribution {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .cap-title {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .l-s-quote {
     padding: 50px 0; }
@@ -1058,7 +1070,7 @@ input[type="checkbox"] {
     width: auto; }
 
   .caption-text {
-    font-size: 34px; }
+    font-size: 38px; }
 
   .image {
     width: calc(100vw - 130px);
@@ -1068,6 +1080,9 @@ input[type="checkbox"] {
     padding: 15px 10%; }
 
   .about-meaning {
-    padding: 15px 10%; } }
+    padding: 15px 10%; }
+
+  ::-webkit-scrollbar {
+    display: none; } }
 
 /*# sourceMappingURL=index.css.map */
