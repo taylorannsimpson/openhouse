@@ -1046,7 +1046,47 @@ input[type="checkbox"] {
     font-size: 72px; }
 
   .form-option {
-    font-size: 52px; }
+    font-size: 52px;
+    margin-left: 80px; }
+
+  .l-checkbox {
+    margin-bottom: 40px; }
+
+  .l-checkbox span.checkbox::before {
+    width: 50px;
+    height: 50px;
+    left: -80px; }
+
+  .l-checkbox span.checkbox::after {
+    left: -80px;
+    width: 50px;
+    height: 50px; }
+
+  .l-checkbox input[type="radio"]:checked + label span.checkbox::after {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    top: -15px; }
+
+  /* open /close */
+  .square-label {
+    font-size: 52px;
+    right: 100px;
+    margin-bottom: 45px; }
+
+  #square {
+    width: 100px;
+    height: 100px; }
+
+  .arc-label {
+    font-size: 52px;
+    right: 100px;
+    margin-bottom: 45px; }
+
+  #arc {
+    width: 100px;
+    height: 100px;
+    border-radius: 0 100px 0 0; }
 
   /* longer text styles */
   .l-images {
