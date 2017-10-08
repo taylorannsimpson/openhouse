@@ -969,6 +969,9 @@ input[type="checkbox"] {
   .label {
     font-size: 52px; }
 
+  .text-label {
+    font-size: 38px; }
+
   .down-arrow {
     width: 60px;
     padding: 15px; }
@@ -977,7 +980,8 @@ input[type="checkbox"] {
     width: auto; }
 
   .height-block {
-    min-height: auto; }
+    min-height: auto;
+    padding-top: 80px; }
 
   /* navigation */
   .l-nav {
@@ -1018,8 +1022,8 @@ input[type="checkbox"] {
     font-size: 38px; }
 
   /* bedroom page */
-  .text-label {
-    font-size: 38px; }
+  .object-list {
+    padding-top: 90px; }
 
   .object {
     padding: 15px 120px;
@@ -1032,10 +1036,10 @@ input[type="checkbox"] {
 
   .tag {
     display: inline-block;
-    font-size: 38px;
+    font-size: 26px;
     line-height: 38px;
     padding: 3px 10px;
-    margin: 20px 20px 20px 0; }
+    margin: 15px 15px 15px 0; }
 
   /* bedroom page nav */
   .l-sort {
@@ -1071,6 +1075,23 @@ input[type="checkbox"] {
     height: 50px; }
 
   .l-checkbox input[type="radio"]:checked + label span.checkbox::after {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    top: -15px; }
+
+  /* dark */
+  .l-checkbox span.s-checkbox::before {
+    width: 50px;
+    height: 50px;
+    left: -80px; }
+
+  .l-checkbox span.s-checkbox::after {
+    left: -80px;
+    width: 50px;
+    height: 50px; }
+
+  .l-checkbox input[type="radio"]:checked + label span.s-checkbox::after {
     height: 40px;
     width: 40px;
     padding: 5px;
@@ -1147,6 +1168,33 @@ input[type="checkbox"] {
   .about-meaning {
     padding: 15px 10%; }
 
+  /* infographics */
+  .l-sort-info {
+    width: 100vw; }
+
+  .sort-info-title {
+    font-size: 72px; }
+
+  .sort-info-option {
+    font-size: 52px; }
+
+  .l-checkbox span.i-checkbox::before {
+    width: 50px;
+    height: 50px;
+    left: -80px; }
+
+  .l-checkbox span.i-checkbox::after {
+    left: -80px;
+    width: 50px;
+    height: 50px; }
+
+  .l-checkbox input[type="checkbox"]:checked + label span.i-checkbox::after {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    top: -15px; }
+
+  /* scrollbar */
   ::-webkit-scrollbar {
     display: none; } }
 
