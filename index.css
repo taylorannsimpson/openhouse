@@ -1015,21 +1015,38 @@ input[type="checkbox"] {
     font-size: 72px; }
 
   .nav-description {
-    font-size: 52px; }
+    font-size: 38px; }
 
   /* bedroom page */
   .text-label {
     font-size: 38px; }
 
   .object {
-    padding: 15px 10%; }
+    padding: 15px 5%;
+    font-size: 38px; }
 
   .meaning {
-    padding: 15px 10%; }
+    padding: 15px 10%;
+    font-size: 38px; }
 
+  /* bedroom page nav */
   .l-sort {
-    width: calc(100vw - 256px);
-    padding: 100px; }
+    padding: 50px;
+    width: auto;
+    margin-top: 160px; }
+
+  .search-bar {
+    padding: 30px 15px;
+    margin-top: 160px; }
+
+  .search-icon {
+    width: 60px; }
+
+  .form-title {
+    font-size: 72px; }
+
+  .form-option {
+    font-size: 52px; }
 
   /* longer text styles */
   .l-images {
