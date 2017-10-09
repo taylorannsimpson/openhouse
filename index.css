@@ -1009,7 +1009,7 @@ input[type="checkbox"] {
   .l-block {
     width: 100vw;
     height: calc(100vh -  120px);
-    bottom: 0;
+    top: 120px;
     overflow-x: hidden; }
 
   .nav-header {
