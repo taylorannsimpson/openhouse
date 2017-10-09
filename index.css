@@ -1169,6 +1169,9 @@ input[type="checkbox"] {
     padding: 15px 10%; }
 
   /* infographics */
+  .l-options {
+    padding: 0 120px; }
+
   .l-sort-info {
     width: 100vw; }
 
@@ -1197,7 +1200,7 @@ input[type="checkbox"] {
   .counter {
     padding: 5%;
     right: 0;
-    left: clear; }
+    left: inherit; }
 
   .storedcounter {
     padding: 5%;
